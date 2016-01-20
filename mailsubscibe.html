@@ -1,66 +1,42 @@
-<!DOCTYPE html>
-<html>
 <style>
-body {
-  margin: 0;
-  padding: 0;
-}
-#mailformeshtrk {
-  background-color: #446faa;
-  height: 280px;
-  overflow: hidden;
-  width: 300px;
-}
-#mailformeshtrk h4 {
-  color: #fff;
-  display: block;
-  font: 22px/33px tahoma;
-  margin: 20px 0 0;
-  padding: 0;
-  text-align: center;
-}
-#mailformeshtrk h5 {
-  color: #eee;
-  display: inline-block;
-  font: 15px tahoma;
-  margin: 0;
-  padding: 10px 0;
-}
-#cnfortext {
-  background-color: #eee;
-  border: 0 none;
-  color: #555;
-  font: 20px times new roman;
-  height: 40px;
-  margin: 0;
-  padding: 0 10px;
-  text-align: center;
-  width: 260px;
-}
-#cnforbu {
-  background-color: #000;
-  border: 0 none;
-  color: #fff;
-  cursor: pointer;
-  font: 20px tahoma;
-  height: 40px;
-  transition: all 0.2s ease 0s;
-  width: 100px;
-}
-#cnforbu:hover {box-shadow:0 0 4px 2px #fff;}
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskufiarabic.css);
+#subscribebox{background:#576269;padding:20px;font-family:&#39;PT Sans&#39;,sans-serif;}
+.widget_follow_subscribe .widget-detail{padding:36px 30px 40px}
+#subscribebox p{color:#fff;font-size:15px;text-align:center;font-weight:700;font-family: 'Noto Sans Kufi Arabic', sans-serif!important; line-height: 3em;}
+.follow-subscribe-social{padding:0 0 14px;border-bottom:#858585 solid 1px}
+.follow-subscribe-social ul{list-style:none;margin:0;padding:0;text-align:center}
+.follow-subscribe-social ul li{display:inline;margin-left: 20px;border-bottom:none}
+.follow-subscribe-social ul li:last-child{margin:0}
+.follow-subscribe-social ul li a{font-size:17px;color:#cacaca;-webkit-transition:color .2s ease-in-out;-moz-transition:color .2s ease-in-out;-ms-transition:color .2s ease-in-out;-o-transition:color .2s ease-in-out;transition:color .2s ease-in-out}
+.follow-subscribe-social ul li a:hover{color:#fff}
+form.subscribe{margin-top:-7px}
+form.subscribe input{display:block;width:100%}
+.subscribe-email{height:45px;border:none;margin:0 0 10px;font-size:.928571em;background-color:rgba(255,255,255,0.2);text-align:center;color:#fff}
+.subscribe-email:focus{outline:0}
+form.subscribe .placeholder{color:#cacaca}
+form.subscribe input:-ms-input-placeholder{color:#cacaca}
+form.subscribe input::-webkit-input-placeholder{color:#cacaca}
+form.subscribe input:-moz-placeholder{color:#fafafa}
+form.subscribe input::-moz-placeholder{color:#fafafa}
+.subscribe-button{height: 45px; font-weight: 700; font-size: 16px; color: #fff; text-transform: uppercase; border: none; background-color: #4FC4F6; transition: background-color .2s ease-in-out; font-family: 'Droid Arabic Naskh', serif;}
+.subscribe-button:hover{background-color:#00A3CE}
+.subscribe-button:focus{outline:0}
 </style>
-<body>
-<div id="mailformeshtrk">
-<center>
-<h4>إشترك عبر البريد الإلكتروني ليصلك جديدنا</h4>
-<h5>ستصلك رسالة على بريدك لتفعيل الخدمة</h5>
-<form id='cnfor' action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=munt', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>
-<input id='cnfortext' type="text" value="أكتب بريدك الإلكتروني" onfocus="if (this.value == &quot;أكتب بريدك الإلكتروني&quot;) {this.value = &quot;&quot;;}" onblur="if (this.value == &quot;&quot;) {this.value = &quot;أكتب بريدك الإلكتروني&quot;;}" name="email"/></p>
-<input id='cnforbu' type="submit" value="إشترك" />
-<input name="uri" type="hidden" value="munt"/>
-<input name="loc" type="hidden" value="en_US"/>
-</form>
-</center>
+<div id="subscribebox">
+<div class="follow-subscribe-social">
+<ul>
+<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-google"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+</ul>
 </div>
-</body>
-</html>
+<p>اشترك في النشرة البريدية</p>
+<form class="subscribe" action='http://feedburner.google.com/fb/a/mailverify?uri=ar1web/TFDh' method='post' onsubmit='window.open(&apos;http://feedburner.google.com/fb/a/mailverify?uri=ar1web/TFDh, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true' target='popupwindow'>
+<input name='uri' type='hidden' value='اسمك المستخدم'/>
+<input name='loc' type='hidden' value='en_US'/>
+<input class="subscribe-email" type='text' name='email' onblur='if (this.value == &quot;&quot;) {this.value = &quot;Your Email&quot;;}' onfocus='if (this.value == &quot;Your Email&quot;) {this.value = &quot;&quot;;}' value='بريدك الالكتروني'/>
+<input class="subscribe-button" type="submit" value="اشترك الان" />
+</form>
+</div>
