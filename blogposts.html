@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+#motabeen {
+  list-style: outside none none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#motabeen li {
+  display: block;
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+#motabeen i, .motabeen span, .motabeen h4 {
+  float: right;
+  line-height: 30px;
+  margin-left: 4px;
+}
+#motabeen i {color: #cc0000; font-size: 20px;}
+#motabeen h4 {color: #0058d2;}
+</style>
+<body>
+<div id="motabeen">
+<h4>احصائيات المدونة</h4>
+<div class='widget-content'>
+<ul class="cnmustatusw">
+<li class="cnmuspos">
+<i class="fa fa-files-o"></i>
+<span>عدد المواضيع : </span>
+<h4 id='cnmustatpost'>&amp;hellip;</h4>
+</li>
+<li id='cnmutc'>
+<i class="fa fa-comments"></i>
+<span>عدد التعليقات : </span>
+<h4 id='cnmustatcommen'>&amp;hellip;</h4>
+</li>
+<li id='cnmutcount'>
+<i class="fa fa-bar-chart"></i>
+<span>عدد المشاهدات : </span>
+<h4 expr:id='data:widget.instanceId + &quot;_totalCount&quot;'>&amp;hellip;</h4>
+</li>
+</ul>
+<script type='text/javascript'>
+//<![CDATA[
+function totalPosts(json){document.getElementById('cnmustatpost').innerHTML=json.feed.openSearch$totalResults.$t};function cnmutc(json){document.getElementById('cnmustatcommen').innerHTML=json.feed.openSearch$totalResults.$t};document.write('<script type=\"text/javascript\" src=\"/feeds/posts/default?alt=json-in-script&max-results=0&callback=totalPosts\"><\/script><script type=\"text/javascript\" src=\"/feeds/comments/default?alt=json-in-script&max-results=0&callback=cnmutc\"><\/script>');
+//]]>
+</script>
+</div>
+</div>
+</body>
+</html>
